@@ -1,0 +1,138 @@
+## Site settings
+site_name: GruvDoc
+site_url: https://abolfazlamiri.ir/gruvdoc
+site_author: Abolfazl Amiri
+site_description: Pre-configured MkDocs project with GruvBox colors and JetBrainsMono font.
+
+## Repo settings
+repo_name: GruvDoc
+repo_url: https://github.com/aasmpro/gruvdoc
+edit_uri: ""
+
+## Theme settings
+theme:
+  name: material
+  custom_dir: docs/overrides
+  ### comment these lines,
+  ### if you want to use default material theme
+  palette:
+    scheme: gruvbox
+    primary: black
+    accent: green
+  ### uncomment to use default material theme
+  # palette:
+  #   scheme: default
+  favicon: assets/images/favicon.png
+  icon:
+    logo: assets/images/favicon.svg
+  logo: assets/images/favicon.svg
+  features:
+    - search.highlight
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.top
+    - toc.integrate
+
+## Extra data
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/aasmpro
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/aasmpro/
+    - icon: octicons/dot-fill-24
+      link: https://abolfazlamiri.ir
+
+  ## Version
+  ### this extra key generates a version text after copyright
+  ### must have name and link
+  version:
+    name: v1.0.4
+    link: https://github.com/aasmpro/gruvdoc/releases/tag/v1.0.4
+
+  ## License
+  ### this extra key generates a license text after copyright
+  ### must have name and link
+  license:
+    name: MIT
+    link: https://github.com/aasmpro/gruvdoc/blob/master/LICENSE
+
+  ## Made with
+  ### this extra key can set `Made with ...` text in footer
+  ### set true to get default one
+  ### comment for set false to remove
+  ### or set your custom text!
+  made_with: true
+
+## Navigation
+use_directory_urls: true
+
+### this is for manual nav configs
+### uncomment to config nav manually
+# nav:
+#   - Home: index.md
+
+## Copyright
+copyright: GruvDoc
+
+## Extra js files
+extra_javascript:
+  - assets/javascripts/tablesort.js
+
+## Extra css files
+### comment these lines,
+### if you want to use default material theme
+extra_css:
+  - assets/stylesheets/fonts.css
+  - assets/stylesheets/vars.css
+  - assets/stylesheets/scheme.css
+  - assets/stylesheets/primary.css
+  - assets/stylesheets/accent.css
+  - assets/stylesheets/admonitions.css
+  - assets/stylesheets/fixes.css
+  - assets/stylesheets/styles.css
+
+## Extension settings
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - meta
+  - toc:
+      permalink: "#"
+
+## Plugin settings
+plugins:
+  - search
+  - macros
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+        remove_comments: true
